@@ -1,0 +1,52 @@
+.carousel-item{
+    padding: 0 5%;
+}
+.my-caption{
+    bottom: 200px;
+    background-color: rgba(94, 158, 166, 0.4);
+    color: #ffffff;
+    padding-left: 20px ;
+    padding-right: 20px ;
+}
+.p-size{
+    font-size: 0.9rem;
+}
+.pb-size{
+    font-size: 0.7rem;
+}
+.bg-gr{
+    background-color: #818182;
+
+
+}
+
+.h-200{height: 200px;}
+.h-50{height: 50px !important;}
+.h-20{ font-size: 12px; line-height: 1;}
+.h-550{height: 550px;}
+.h-300{height: 300px;}
+.h-157{height: 157px;}
+
+
+@media screen and (max-width: 700px){
+    .menu-position{
+        position: relative;
+        bottom: 50px;
+        left: 430px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .menu-position{
+        position: relative;
+        bottom: 50px;
+        left: 390px;
+    }
+    .right-position{
+        float:none!important;
+        margin-left: 30%;
+    }
+    .left-position{
+        margin-left: 13%;
+    }
+}

@@ -7,22 +7,23 @@ use Illuminate\Http\Request;
 
 class StudentController extends Controller
 {
-    protected $name ;
-    protected $city ;
+//    protected $name ;
+//    protected $city ;
     protected $students ;
     protected $student ;
 
     public function index(){
-      $this->student = new Student();
-      $this->student->newStudent();
-      return 'success';
 
-//        return view('all', ['students'=>$this->students]);
+      return view('add-student');
 
-//        return view('all')->with([
-//            'data'= $this->name,
-//            'rafa'=>$this->city
-//        ]);
-//        return view('all', compact('data','rafa'));
     }
+    public function create(Request $request){
+        $this->student =new Student();
+        $this->student->name= $request->name;
+        $this->student->email= $request->email;
+        $this->student->mobile= $request->mobile;
+        $this->student->save();
+        return redirect()->back()->with('message','Student info save successfully.');
+    }
+
 }
