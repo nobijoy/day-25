@@ -17,8 +17,12 @@
             <a href="" class="navbar-brand">Logo</a>
             <ul class="navbar-nav">
                 <li><a href="{{route('home')}}" class="nav-link">Add Student</a></li>
-                <li><a href="" class="nav-link">Manage Student</a></li>
+                <li><a href="{{route('manage-student')}}" class="nav-link">Manage Student</a></li>
                 <li><a href="{{route('add-blog')}}" class="nav-link">Add Blog</a></li>
+                <li><a href="{{route('manage-blog')}}" class="nav-link">Manage Blogs</a></li>
+                <li><a href="{{route('add-product')}}" class="nav-link">Add Product</a></li>
+                <li><a href="{{route('manage-product')}}" class="nav-link">Manage Product</a></li>
+
                 <li><a href="" class="nav-link">Login</a></li>
             </ul>
         </div>

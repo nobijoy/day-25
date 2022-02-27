@@ -25,5 +25,27 @@ class StudentController extends Controller
         $this->student->save();
         return redirect()->back()->with('message','Student info save successfully.');
     }
+    public function manage(){
+        $this->students = Student::orderBy('id','desc')->get();
+
+        return view('manage-student', ['students'=>$this->students]);
+    }
+    public function edit($id){
+        $this->student = Student::find($id);
+        return view('edit-student', ['student'=>$this->student]);
+    }
+    public function update(Request $request, $id){
+        $this->student = Student::find($id);
+        $this->student->name = $request->name;
+        $this->student->email = $request->email;
+        $this->student->mobile = $request->mobile;
+        $this->student->save();
+        return redirect('/manage-student')->with('message','Student info updated successfully');
+    }
+    public function delete($id){
+        $this->student = Student::find($id);
+        $this->student->delete();
+        return redirect('/manage-student')->with('message', 'Student info deleted successfully');
+    }
 
 }
