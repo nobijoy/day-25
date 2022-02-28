@@ -35,9 +35,9 @@
                                         <td>{{$product->name}}</td>
                                         <td>{{$product->category}}</td>
                                         <td>{{$product->brand}}</td>
-                                        <td>{{$product->price}}</td>
+                                        <td>{{$product->price}} &#2547;</td>
                                         <td>{{$product->description}}</td>
-                                        <td>{{$product->image}}</td>
+                                        <td><img src="{{asset($product->image)}}" width="100"/></td>
                                         <td>
                                             <a href="{{route('edit-product',['id'=> $product->id])}}" class="btn btn-success btn-sm mr-2">
                                                 <i class="fa fa-user-edit"></i>

@@ -13,7 +13,7 @@
                         <div class="card-header bg-dark text-white">Edit Product Details</div>
                         <div class="card-body">
                             <h4 class="text-center text-success">{{Session::get('message')}}</h4>
-                            <form action="{{route('update-product', ['id' => $product->id])}}" method="POST">
+                            <form action="{{route('update-product', ['id' => $product->id])}}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group row">
                                     <label class="col-form-label col-md-3">Name</label>
@@ -48,6 +48,7 @@
                                 <div class="form-group row">
                                     <label class="col-form-label col-md-3">Product Image</label>
                                     <div class="col-md-9">
+                                        <img src="{{asset($product->image)}}" alt="" height="100"/>
                                         <input type="file" class="form-control-file" name="image"/>                                    </div>
                                 </div>
                                 <div class="form-group row">
